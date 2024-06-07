@@ -7,5 +7,6 @@ config();
 
 export const env = cleanEnv(process.env, {
     PORT: port({ default: 8080 }),
-    NODE_ENV: str()
+    NODE_ENV: str(),
+    DATABASE_URL: str()
 })
