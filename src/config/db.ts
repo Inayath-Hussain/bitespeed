@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
 
-export const prismaClient = new PrismaClient({
+export const prisma = new PrismaClient({
     log: ["query"]
 })
 
@@ -12,7 +12,7 @@ export const prismaClient = new PrismaClient({
  */
 export const connectToDb = async () =>
     new Promise(resolve => {
-        prismaClient.$connect()
+        prisma.$connect()
             .then(() => {
                 console.log("Connected to db")
                 resolve(true);
