@@ -7,6 +7,7 @@ export const app = express();
 
 // middleware
 app.use(morgan("dev"));
+app.use(express.json())
 
 
 // routes
